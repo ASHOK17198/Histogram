@@ -25,7 +25,7 @@
 static u_int16_t num_cols = 4096;
 static u_int16_t num_rows = 3072;
 
-int	main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     struct timeval  tv1, tv2;
     gettimeofday(&tv1, NULL);
@@ -53,25 +53,24 @@ int	main(int argc, char *argv[])
 	    exit(2);
 	} 
  
-    int length = num_rows*num_cols*(3)/2;       /* 2 - 12 bits equals to 3 - 8 bits */
+    int length = num_rows * num_cols * (3)/2;       /* 2 - 12 bits equals to 3 - 8 bits */
   
-    for(int i=0; i<length; i+=3){               /* ODD    */
-       if(i%(3*(8092)/2) < 4096*(3)/2){
+    for(int i=0; i<length; i+=3){               
+       if (i%(3*(8092)/2) < 4096*(3)/2) {       /* ODD RAW */
           hist[0][(buffer[i] >> 3)]++;          /* CH[0]  */
           hist[1][((buffer[i+1] & 0x0F << 1) | 
           (buffer[i+2] >> 7))]++;               /* CH[1]  */
-        }  
-       else{                                    /* EVEN   */
+        } else {                                /* EVEN   */
         hist[2][( buffer[i] >> 3 )]++ ;         /* CH[2]  */
         hist[3][((buffer[i+1] & 0x0F << 1) |
          (buffer[i+2] >> 7))]++ ;               /* CH[3]  */
         }  
     } 
 
-    printf("\n------------------------------------------------------ ");   
-    printf("\nBUCKET NO.    R1        G1        G2        B1");
+    printf("\n---------------------------------------------------");   
+    printf("\nBUCKET NO.    R1        G1       G2        B1");
     
-    for(int i=0; i<32; i++){
+    for(int i=0; i<32; i++) {
        printf("\n%d        ",i);
        printf("   =");
 
@@ -80,7 +79,7 @@ int	main(int argc, char *argv[])
               hist[2][i] ,hist[3][i]);
     } 
   
-    printf("\n--------------------------------------------------------");
+    printf("\n---------------------------------------------------");
     printf("\n");
 
     rc = munmap(buffer, size);
@@ -95,6 +94,7 @@ int	main(int argc, char *argv[])
     return 0;
 }
    //12582912
+    
    
    
    
