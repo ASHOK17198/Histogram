@@ -1,14 +1,14 @@
 /**********************************************************************
 **  histogram.c
-**	Histogramm from Memory Buffer
-**	Version 1.00
+**  Histogramm from Memory Buffer
+**  Version 1.00
 **
 **  Copyright (C) 2019 Ashok Singh
 **
-**	This program is free software: you can redistribute it and/or
-**	modify it under the terms of the GNU General Public License
-**	as published by the Free Software Foundation, either version
-**	2 of the License, or (at your option) any later version.
+**   This program is free software: you can redistribute it and/or
+**   modify it under the terms of the GNU General Public License
+**   as published by the Free Software Foundation, either version
+**   2 of the License, or (at your option) any later version.
 **
 **  Refrence : https://github.com/apertus-open-source-cinema/axiom-beta-firmware/blob/master/software/sensor_tools/hist/hist.c 
 **********************************************************************/
@@ -25,12 +25,11 @@
 static u_int16_t num_cols = 4096;
 static u_int16_t num_rows = 3072;
 
-int	main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     struct timeval  tv1, tv2;
     gettimeofday(&tv1, NULL);
     
-     
     int hist[4][32] = {{ 0 }};
     u_int8_t *buffer;
 
@@ -55,7 +54,7 @@ int	main(int argc, char *argv[])
  
     int length = num_rows * num_cols * (3)/2;        /* 2 - 12 bits equals to 3 - 8 bits */
   
-    for(int i=0; i<length; i+=3){               
+    for(int i=0; i<length; i+=3) {               
        if (i % (3 * 8092 / 2) < 4096 * (3) / 2) {       /* ODD ROW */
           hist[0][(buffer[i] >> 3)]++;                  /* CH[0] */
           hist[1][(buffer[i+1] & 0x0F << 1 |            /* CH[1] */
