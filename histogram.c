@@ -73,7 +73,6 @@ int	main(int argc, char *argv[])
     for(int i=0; i<32; ++i) {
        printf("\n%d        ",i);
        printf("   =");
-
        printf(" %d     %d     %d     %d ",
               hist[0][i], hist[1][i],
               hist[2][i], hist[3][i]);
@@ -93,11 +92,4 @@ int	main(int argc, char *argv[])
 
     return 0;
 }
-   //12582912
-   
-   
-   
-   
-   
-   
-   
+   //12582912 
