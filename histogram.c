@@ -52,11 +52,11 @@ int main(int argc, char *argv[])
 	    exit(2);
 	} 
  
-    int length = num_rows * num_cols * (3)/2;        /* 2 - 12 bits equals to 3 - 8 bits */
+    int length = num_rows * num_cols * (3)/2;                           /* 2 - 12 bits equals to 3 - 8 bits */
   
     for(int i = 0; i < length; i += 3) {               
-       if (i % (3 * 8092 / 2) < 4096 * (3) / 2) {       /* ODD ROW */
-          hist[0][(buffer[i] >> 3)]++;                  /* CH[0] */
+       if (i % (3 * 8092 / 2) < 4096 * (3) / 2) {                      /* ODD ROW */
+          hist[0][(buffer[i] >> 3)]++;                            /* CH[0] */
           hist[1][(buffer[i + 1] & 0x0F << 1 |            /* CH[1] */
                    buffer[i + 2] >> 7)]++;          
         } else {                                        /* EVEN ROW*/
