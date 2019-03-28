@@ -47,6 +47,7 @@ double	delta_s(struct timespec *a, struct timespec *b)
 	return ns_to_s(delta_ns(a, b));
 }
 
+static inline
 void histogram(u_int64_t *buffer)
 {   
     int hist[4][32] = {{ 0 }};
