@@ -21,6 +21,6 @@ make
 make clean
 ```
 # Build status
-| master | dev |
-|:------:|:------:|
+| master |
+|:------:|
 [![CircleCI](https://circleci.com/gh/XLAR-8/Histogram.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram)
