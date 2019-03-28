@@ -2,7 +2,10 @@
 This tool extracts histogram out of raw data after loading image data from the memeory.
 Provides 4 channel histogram with 32 buckets per channel and evaluate the performance of code .
 
-
+# Build status
+| master | dev |
+|:------:|:------:|
+[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram)|[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram/tree/dev.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram/tree/dev)|
 
 
 ## To build/make the C++ program
@@ -20,7 +23,4 @@ make
 ```
 make clean
 ```
-# Build status
-| master | dev |
-|:------:|:------:|
-[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram)|[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram/tree/dev.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram/tree/dev)|
+
