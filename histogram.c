@@ -53,10 +53,10 @@ void histogram(u_int64_t *buffer)
     u_int64_t *ptr = (u_int64_t*)buffer; 
     __int128_t reservoir = 0;
     
-    // bits in reservoir
+    /*bits in reservoir*/
     int bits = 0; 
 
-    //taking 64-bits at a time to reduce cache expense
+    /*taking 64-bits at a time to reduce cache expense*/
     for (int j = 0; j < num_rows; ++j) {
         for (int i = 0; i < num_cols / 2; ++i) {
             if (bits < 24) {
