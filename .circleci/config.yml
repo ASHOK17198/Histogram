@@ -2,8 +2,8 @@ version: 2
 
 jobs:
   build:
-   docker:
-        - image: buildpack-deps:trusty
+    docker:
+      - image: greyltc/archlinux
     steps:
       - checkout
       - run:
@@ -17,4 +17,4 @@ jobs:
           command: 'make clean'
       - run:
           name: COMPILING CODE
-command: 'make'
+          command: 'make'
