@@ -23,4 +23,4 @@ make clean
 # Build status
 | master | dev |
 |:------:|:------:|
-|[![CircleCI][![CircleCI](https://circleci.com/gh/XLAR-8/Histogram.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram)|
+[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram)
