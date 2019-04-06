@@ -5,7 +5,7 @@ Provides 4 channel histogram with 32 buckets per channel and evaluate the perfor
 # Build status
 | master | dev |
 |:------:|:------:|
-[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram)|[![CircleCI](https://circleci.com/gh/XLAR-8/Histogram/tree/dev.svg?style=svg)](https://circleci.com/gh/XLAR-8/Histogram/tree/dev)|
+[![CircleCI](https://circleci.com/gh/ASHOK17198/Histogram.svg?style=svg)](https://circleci.com/gh/17198/Histogram)|[![CircleCI](https://circleci.com/gh/ASHOK17198/Histogram/tree/dev.svg?style=svg)](https://circleci.com/gh/ASHOK17198/Histogram/tree/dev)|
 
 
 ## To build/make the C++ program
